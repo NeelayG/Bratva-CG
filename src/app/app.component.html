@@ -1,0 +1,25 @@
+<div class="container">
+
+  <button onclick="saveData()">Save</button>
+  <h1>Angular Table with Checkbox Example - ItSolutionStuff.com</h1>
+    
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th><input type="checkbox" [checked]="isAllCheckBoxChecked()" (change)="checkAllCheckBox($event)"></th>
+        <th>ID</th>
+        <th>Body</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts; let i=index;">
+        <td><input type="checkbox" value="{{post.id}}"></td>
+        <td>{{ post.id }}</td>
+        <td>{{ post.body }}</td>
+        <td>{{ post.title }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
